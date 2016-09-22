@@ -60,12 +60,12 @@ $ docker ps
 ```
 This will get you the container id for the next step.
 $ docker exec <container id> -ti /bin/bash
-``
+```
 
 Alternately, you can use this.
 ```
 $ docker exec $(docker ps | grep php71_sandbox| awk {'print $1'}) /bin/bash
-```x
+```
 
 This should drop you to another command prompt in the container. 
 
