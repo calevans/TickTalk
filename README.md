@@ -1,3 +1,5 @@
+![=C= Approved](https://img.shields.io/badge/%3DC%3D-Aproved-green.svg?style=plastic)
+
 # Tick Talk
 This repo contains the source code from the Nomad PHP Lightning Talk "Tick Talk" by Cal Evans. 
 
