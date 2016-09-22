@@ -93,7 +93,7 @@ Swapping to the second terminal session, use `sendsig.sh` to send one of the fou
 
 
 ## In the first terminal session
-If you wish, you can also press CTLR-C in the first window to stop the program. Since we catch `SIGINT`, this will cause the current run to complete, and then an orderly exit.
+If you wish, you can also press CTL-C in the first window to stop the program. Since we catch `SIGINT`, this will cause the current run to complete, and then an orderly exit.
 
 
 # Fin
