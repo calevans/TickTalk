@@ -15,6 +15,7 @@ I needed something that:
 This idea fits the bill. It serves absolutely no other purpose other than to illustrate the new [Asynchronous Signal Handling (without TICKs)
 ](https://wiki.php.net/rfc/async_signals) feature of PHP 7.1.
 
+**This is not a Docker tutorial.** Yes. It uses Docker. If you know anything at all about Docker, and have it installed, you can probably figure out what is going on. 
 
 ## Files
 - **Dockerfile**
