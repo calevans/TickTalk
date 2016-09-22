@@ -12,7 +12,8 @@ I needed something that:
 - Could loop indefinitely but show that progress was being made
 - I could gather stats on
 
-This idea fits the bill. It serves absolutely no other purpose other than to illustrate the new feature of PHP 7.1
+This idea fits the bill. It serves absolutely no other purpose other than to illustrate the new [Asynchronous Signal Handling (without TICKs)
+](https://wiki.php.net/rfc/async_signals) feature of PHP 7.1.
 
 
 ## Files
