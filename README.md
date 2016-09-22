@@ -7,7 +7,7 @@ The program you are about to run, loads in the text of the poem "Xanadu". It the
 I needed something that:
 
 - Would run for a long time
-- I could loop.
+- Could loop indefinitely but show that progress was being made
 - I could gather stats on
 
 This idea fits the bill. It serves absolutely no other purpose other than to illustrate the new feature of PHP 7.1
