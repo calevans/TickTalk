@@ -1,11 +1,23 @@
 # Tick Talk
 This repo contains the source code from the Nomad PHP Lightning Talk "Tick Talk" by Cal Evans. 
 
+The program you are about to run, loads in the text of the poem "Xanadu". It then goes letter by letter guessing and re-guessing until it gets the letter correct. It then moves to the next letter until it has completely guessed all the letters in the poem. (We give it CRFLs for free). In this way, it is a very poor implementation of the idea [The Infinite Money Therom](https://en.wikipedia.org/wiki/Infinite_monkey_theorem). 
+
+## But...WHY?
+I needed something that:
+
+- Would run for a long time
+- I could loop.
+- I could gather stats on
+
+This idea fits the bill. It serves absolutely no other purpose other than to illustrate the new feature of PHP 7.1
+
+
 ## Files
 - **Dockerfile**
-The docker file you need to build PHP 7.1 If you alreayd have PHP 7.1 built, you can safely ignore this
+The docker file you need to build PHP 7.1 If you already have PHP 7.1 built, you can safely ignore this
 - **sigtest.php**
-The main test file. run this file using PHP 7.1 in one window and open another window in the same machine to send signals from.
+The main test file. Run this file using PHP 7.1 in one terminal session and open another terminal session connected the same machine or container to send signals from.
 - **text.txt**
 The source of the poem [Xanadu](https://www.poetryfoundation.org/poems-and-poets/poems/detail/43991) by Samuel Taylor Coleridge.
 - **sendsig.sh**
@@ -18,13 +30,13 @@ A very small shell script that can be used to send a signal to sigtest.php. It m
 
 # Instructions
 
-For this demo, you will need 2 terminal windows open. If yoyu are using the Docker container provided, you will need both windows to be connected nto the running container. If you have PHP 7.1 already installed on the machine you are running this on, there is no need to run the Docker container.
+For this demo, you will need 2 terminal sessions open. If you are using the Docker container provided, you will need both sessions to be connected to the running container. If you have PHP 7.1 already installed on the machine you are running this on, there is no need to build or run the Docker container.
 
 ## Open the first terminal session
 Again, if you are not using Docker, skip this.
 
 
-If you are using docker, we need to first build the image. Use this command.
+We need to first build the image. Use this command.
 ```
 $ docker build --tag php71_sandbox ./
 ```
@@ -67,17 +79,21 @@ Now, in both windows navigate to the /opt directory and ensure that you have the
 ```
 $ php sigtest.php
 ```
+Run the `sigtest.php` program. If all goes well, you won't see anything at all happen.
+
 
 ## In the second terminal session
 ```
 $ ./sendsig.sh USR1
 ```
 
-This should cause sigtest.php to output the average number of guesses per run and the total number of guesses it has made. See above for the other signals you can send.
+Swapping to the second terminal session, use `sendsig.sh` to send one of the four signals to sigtest.php. The command above should cause sigtest.php to output the average number of guesses per run and the total number of guesses it has made. See above for the other signals you can send.
+
 
 ## In the first terminal session
 If you wish, you can also press CTLR-C in the first window to stop the program. Since we catch `SIGINT`, this will cause the current run to complete, and then an orderly exit.
 
 
+# Fin
 
-
+If you are totally confused as to the point of this, watch the video.
