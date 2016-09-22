@@ -3,7 +3,7 @@
 # Tick Talk
 This repo contains the source code from the Nomad PHP Lightning Talk "Tick Talk" by Cal Evans. 
 
-The program you are about to run, loads in the text of the poem "Xanadu". It then goes letter by letter guessing and re-guessing until it gets the letter correct. It then moves to the next letter until it has completely guessed all the letters in the poem. (We give it CRFLs for free). In this way, it is a very poor implementation of the idea [The Infinite Monkey Therom](https://en.wikipedia.org/wiki/Infinite_monkey_theorem). 
+The program you are about to run, loads in the text of the poem "Xanadu". It then goes letter by letter guessing and re-guessing until it gets the letter correct. It then moves to the next letter until it has completely guessed all the letters in the poem. (We give it CRFLs for free). In this way, it is a very poor implementation of the idea [The Infinite Monkey Theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem). 
 
 ## But...WHY?
 I needed something that:
