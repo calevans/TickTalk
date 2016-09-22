@@ -53,7 +53,8 @@ $ docker exec <container id> -ti /bin/bash
 Alternately, you can use this.
 ```
 $ docker exec $(docker ps | grep php71_sandbox| awk {'print $1'}) /bin/bash
-``
+```
+
 This should drop you to another command prompt in the container. 
 
 it is best if you arrange your terminal windows so that you can see them both at the same time. They don't need to be big, you just want to be able to work in one and see the other.
