@@ -17,7 +17,7 @@ This idea fits the bill. It serves absolutely no other purpose other than to ill
 
 ## Files
 - **Dockerfile**
-The docker file you need to build PHP 7.1 If you already have PHP 7.1 built, you can safely ignore this
+A docker file that will build PHP 7.1 from the [php-src](https://github.com/php/php-src) repo. If you already have PHP 7.1 installed, you can safely ignore this.
 - **sigtest.php**
 The main test file. Run this file using PHP 7.1 in one terminal session and open another terminal session connected the same machine or container to send signals from.
 - **text.txt**
