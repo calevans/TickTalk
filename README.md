@@ -58,7 +58,9 @@ To be able to send signals we will need a second window in the container. You us
 ```
 $ docker ps
 ```
+
 This will get you the container id for the next step.
+```
 $ docker exec <container id> -ti /bin/bash
 ```
 
