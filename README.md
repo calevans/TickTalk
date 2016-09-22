@@ -1,15 +1,15 @@
 # Tick Talk
-This repo contains the source code form the Nomad PHP Lightning Talk "Tick Talk" by Cal Evans. 
+This repo contains the source code from the Nomad PHP Lightning Talk "Tick Talk" by Cal Evans. 
 
 ## Files
-- Dockerfile
+- **Dockerfile**
 The docker file you need to build PHP 7.1 If you alreayd have PHP 7.1 built, you can safely ignore this
-- sigtest.php
+- **sigtest.php**
 The main test file. run this file using PHP 7.1 in one window and open another window in the same machine to send signals from.
-- text.txt
-The source of the poem [https://www.poetryfoundation.org/poems-and-poets/poems/detail/43991](Xanadu) by Samuel Taylor Coleridge.
--sendsig.sh
-A small shell script that can be used to send a signal to sigtest.php. It must be run on the same machine or in the same docker instance as sigtest.php is running.
+- **text.txt**
+The source of the poem [Xanadu](https://www.poetryfoundation.org/poems-and-poets/poems/detail/43991) by Samuel Taylor Coleridge.
+- **sendsig.sh**
+A very small shell script that can be used to send a signal to sigtest.php. It must be run on the same machine or in the same docker instance as sigtest.php is running.
   - `USR1` Displays an abbreviated statistics display
   - `USR2` Resets all statistics
   - `TERM` Terminates the program at the end of the current run and displays the ending statistics.
@@ -53,7 +53,7 @@ $ docker exec <container id> -ti /bin/bash
 Alternately, you can use this.
 ```
 $ docker exec $(docker ps | grep php71_sandbox| awk {'print $1'}) /bin/bash
-```
+```x
 
 This should drop you to another command prompt in the container. 
 
